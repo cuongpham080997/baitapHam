@@ -1,0 +1,243 @@
+html {
+    font-size: 50px
+}
+
+body {
+    background-color: rgba(20, 53, 124, 0.425);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.carousel-inner {
+    max-width: 625px;
+}
+
+.carousel-control-prev {
+    width: 50px;
+    height: 50px;
+    transform: translate(-57px, 388px);
+}
+
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    transform: translate(57px, 388px);
+}
+
+
+.item {
+    position: relative;
+    width: 12.5rem;
+    height: 12.5rem;
+
+}
+
+.mail {
+    position: absolute;
+    height: 9.375rem;
+    width: 12.5rem;
+    transition: all .4s;
+    transform: translateY(2.125rem);
+}
+
+
+.mail .body {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent #e95f55 transparent;
+    bottom: 0;
+    border-style: solid;
+    border-width: 0 0 6.25rem 12.5rem;
+    z-index: 2;
+}
+
+.mail .top-fold {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: #cf4a43 transparent transparent transparent;
+    top: 3.125rem;
+    /* transform: rotate(180deg); */
+    border-style: solid;
+    border-width: 3.125rem 6.25rem 0 6.25rem;
+    transform-origin: 50% 0%;
+    transition: transform .5s 1s, z-index 4s;
+    z-index: 2;
+}
+
+.mail .back-fold {
+    position: absolute;
+    width: 12.5rem;
+    height: 6.25rem;
+    background: #cf4a43;
+    bottom: 0;
+    z-index: 0;
+}
+
+.mail .left-fold {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent transparent #e15349;
+    border-style: solid;
+    border-width: 3.125rem 0 3.125rem 6.25rem;
+    z-index: 2;
+}
+
+.mail .letter {
+    width: 10rem;
+    height: 3.75rem;
+    background: white;
+    left: 1.25rem;
+    bottom: 0px;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s .5s, z-index 2s;
+}
+
+.mail .letter .border {
+    height: 0.62rem;
+    width: 100%;
+    background: repeating-linear-gradient(-45deg, #cb5a5e, #cb5a5e 0.5rem, transparent 0.5rem, transparent 1.125rem);
+}
+
+/* .mail .letter .title{
+    height: 0.625rem;
+    width:40%;
+    background: #cb5a5e;
+    margin-top: 0.625rem;
+    margin-left: 0.3125rem;
+}
+
+
+.shadow {
+    position: absolute;
+    width: 12.625rem;
+    height: 0.875rem;
+    background: radial-gradient(#00000080, #00000000, #00000000);
+    top: 11.5rem;
+    left: 50%;
+    transition: 0.4s;
+    transform: translateX(-50%);
+    border-radius: 100%;
+}
+
+/* .item.open .mail{
+    transform: translateY(2.125rem);
+} */
+
+.item.open .mail .top-fold {
+    transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+
+.item.open .mail .letter {
+    height: 11.25rem;
+    transition: 2s 0.2s;
+}
+
+.item.open .shadow {
+    width: 17rem;
+}
+
+.item svg {
+    position: absolute;
+    bottom: 3.24rem;
+    left: 5.24rem;
+    animation: shake .5s infinite;
+    animation-delay: 1.5s;
+    cursor: pointer;
+}
+
+.item.open svg {
+    animation: none;
+}
+
+
+#item1 .letter .title h2{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+#item1 .letter__content label{
+    font-size: 16px;
+}
+
+#item1 .letter__content input[type='text']{
+    padding: 0;
+    width: 300px;
+    height:20px;
+    position: relative;
+    outline: none;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-color: gray;
+    color: rgba(0, 0, 0, 0.584);
+    transition: all .5s;
+    font-size: 14px;
+}
+
+#item1 .letter__content button{
+    padding: 16px 27px;
+    font-size: 14px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+    border: 1px solid transparent;
+    transition: all 0.5s;
+    border-radius: 30px;
+    color: #fff;
+    outline: none;
+    text-transform: uppercase;
+    line-height: 1.2px;
+}
+#item1 .letter__content button:hover{
+    background-position: right;
+}
+
+#item1 .letter__content .l-radio1{
+    margin-left : -15px
+}
+
+#item1 .letter__content .l-radio2{
+    margin-left : 2px
+}
+
+#item1 .letter__content .l-radio4{
+    margin-left : 1px
+}
+
+
+
+
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
