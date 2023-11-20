@@ -31,68 +31,65 @@
               <div class="letter__content">
                 <form class="d-flex gap-1 align-items-center">
                   <label for="diemChuan">Điểm chuẩn:</label>
-                  <input type="text" placeholder="" pattern="[0-9]*" id="diemChuan" />
+                  <input type="text" id="diemChuan" />
                 </form>
                 <div class="d-flex gap-3 align-items-center">
                   <label style="font-size: 16px">Khu vực: </label>
-                  <label for="f-option" class="l-radio">
-                    <input type="radio" id="f-option" name="selector1" tabindex="1" />
+                  <label for="khuVucA" class="l-radio">
+                    <input type="radio" id="khuVucA" name="selector1" tabindex="1" />
                     <span>A</span>
                   </label>
-                  <label for="s-option" class="l-radio">
-                    <input type="radio" id="s-option" name="selector1" tabindex="2" />
+                  <label for="khuVucB" class="l-radio">
+                    <input type="radio" id="khuVucB" name="selector1" tabindex="2" />
                     <span>B</span>
                   </label>
-                  <label for="t-option" class="l-radio">
-                    <input type="radio" id="t-option" name="selector1" tabindex="3" />
+                  <label for="khuVucC" class="l-radio">
+                    <input type="radio" id="khuVucC" name="selector1" tabindex="3" />
                     <span>C</span>
                   </label>
-                  <label for="z-option" class="l-radio">
-                    <input type="radio" id="t-option" name="selector1" tabindex="4" />
+                  <label for="khuVucX" class="l-radio">
+                    <input type="radio" id="khuVucX" name="selector1" tabindex="4" />
                     <span>X</span>
                   </label>
                 </div>
                 <div class="d-flex gap-3 align-items-center">
                   <label style="font-size: 16px">Đối tượng: </label>
-                  <label for="f-option2" class="l-radio1">
-                    <input type="radio" id="z-option2" name="selector2" tabindex="1" />
+                  <label for="object0" class="l-radio1">
+                    <input type="radio" id="object0" name="selector2" tabindex="1" />
                     <span>0</span>
                   </label>
-                  <label for="s-option2" class="l-radio2">
-                    <input type="radio" id="f-option2" name="selector2" tabindex="2" />
+                  <label for="object1" class="l-radio2">
+                    <input type="radio" id="object1" name="selector2" tabindex="2" />
                     <span>1</span>
                   </label>
-                  <label for="t-option2" class="l-radio3">
-                    <input type="radio" id="s-option2" name="selector2" tabindex="3" />
+                  <label for="object2" class="l-radio3">
+                    <input type="radio" id="object2" name="selector2" tabindex="3" />
                     <span>2</span>
                   </label>
-                  <label for="four-option2" class="l-radio4">
-                    <input type="radio" id="t-option2" name="selector2" tabindex="4" />
+                  <label for="object3" class="l-radio4">
+                    <input type="radio" id="object3" name="selector2" tabindex="4" />
                     <span>3</span>
                   </label>
                 </div>
                 <form class="d-flex gap-1 align-items-center">
                   <label for="diemMon1">Điểm môn 1:</label>
-                  <input type="text" placeholder="" pattern="[0-9]*" id="diemMon1" />
+                  <input type="text" id="diemMon1" />
                 </form>
                 <form class="d-flex gap-1 align-items-center">
                   <label for="diemMon2">Điểm môn 2:</label>
-                  <input type="text" placeholder="" pattern="[0-9]*" id="diemMon2" />
+                  <input type="text" id="diemMon2" />
                 </form>
                 <form class="d-flex gap-1 align-items-center">
                   <label for="diemMon3">Điểm môn 3:</label>
-                  <input type="text" placeholder="" pattern="[0-9]*" id="diemMon3" />
+                  <input type="text"id="diemMon3" />
                 </form>
                 <div class="d-flex flex-column justify-content-center">
                   <button type="button" id="btn-1" class="mx-auto mt-1">
                     Kết quả
                   </button>
-                  <div class="alert alert-danger px-1 py-1 text-center my-2" role="alert" id="result1"></div>
+                  <div class="alert alert-danger px-1 py-1 text-center my-2" role="alert" id="result1"
+                    style="font-size: 12px;"></div>
                 </div>
-              </div>
-              <div class="context"></div>
-              <div class="stamp">
-                <div class="stamp-inner"></div>
               </div>
             </div>
             <div class="top-fold"></div>
@@ -124,12 +121,27 @@
         <div class="item" id="item2">
           <div class="mail">
             <div class="back-fold"></div>
-            <div class="letter">
+            <div class="letter d-flex flex-column align-items-center">
               <div class="border"></div>
-              <div class="title"></div>
-              <div class="context"></div>
-              <div class="stamp">
-                <div class="stamp-inner"></div>
+              <div class="title">
+                <h2>TÍNH TIỀN ĐIỆN</h2>
+              </div>
+              <div class="letter__content">
+                <form class="d-flex gap-1 align-items-center">
+                  <label for="customerName">Tên khách hàng:</label>
+                  <input type="text" placeholder="" pattern="[a-zA-Z]*" id="customerName" />
+                </form>
+                <form class="d-flex align-items-center mt-2" style="gap: 79px;">
+                  <label for="soKw">Số Kw:</label>
+                  <input type="text" placeholder="" pattern="[0-9]*" id="soKw" />
+                </form>
+                <div class="d-flex flex-column justify-content-center">
+                  <button type="button" id="btn-2" class="mx-auto mt-2  ">
+                    Kết quả
+                  </button>
+                  <div class="alert alert-danger px-1 py-1 text-center my-2" role="alert" id="result2"
+                    style="font-size: 12px;"></div>
+                </div>
               </div>
             </div>
             <div class="top-fold"></div>
@@ -178,12 +190,31 @@
         <div class="item" id="item3">
           <div class="mail">
             <div class="back-fold"></div>
-            <div class="letter">
+            <div class="letter d-flex flex-column align-items-center">
               <div class="border"></div>
-              <div class="title"></div>
-              <div class="context"></div>
-              <div class="stamp">
-                <div class="stamp-inner"></div>
+              <div class="title">
+                <h2>TÍNH THUẾ THU NHẬP CÁ NHÂN</h2>
+              </div>
+              <div class="letter__content">
+                <form class="d-flex align-items-center mb-2" style="gap: 104px;">
+                  <label for="hoTen">Họ tên</label>
+                  <input type="text" id="hoTen" />
+                </form>
+                <form class="d-flex gap-1 align-items-center mb-2">
+                  <label for="tongThuNhap">Tổng thu nhập/năm</label>
+                  <input type="text" id="tongThuNhap" />
+                </form>
+                <form class="d-flex gap-1 align-items-center mb-2">
+                  <label for="nguoiPhuThuoc">Số người phụ thuộc</label>
+                  <input type="text" id="nguoiPhuThuoc" />
+                </form>
+                <div class="d-flex flex-column justify-content-center">
+                  <button type="button" id="btn-3" class="mx-auto">
+                    Kết quả
+                  </button>
+                  <div class="alert alert-danger px-1 py-1 text-center my-2" role="alert" id="result3"
+                    style="font-size: 12px;"></div>
+                </div>
               </div>
             </div>
             <div class="top-fold"></div>
@@ -232,12 +263,43 @@
         <div class="item" id="item4">
           <div class="mail">
             <div class="back-fold"></div>
-            <div class="letter">
+            <div class="letter d-flex flex-column align-items-center">
               <div class="border"></div>
-              <div class="title"></div>
-              <div class="context"></div>
-              <div class="stamp">
-                <div class="stamp-inner"></div>
+              <div class="title">
+                <h2>TÍNH TIỀN CÁP</h2>
+              </div>
+              <div class="letter__content">
+                <div class="d-flex gap-3 align-items-center mb-1">
+                  <label style="font-size: 16px">Khu vực: </label>
+                  <label for="nhaDan" class="l-radio">
+                    <input type="radio" id="nhaDan" name="selector1" tabindex="1" />
+                    <span>Nhà Dân</span>
+                  <br>
+                  </label>
+                  <label for="business" class="l-radio">
+                    <input type="radio" id="business" name="selector1" tabindex="2" />
+                    <span>Doanh Nghiệp</span>
+                  </label>
+                </div>
+                <form class="d-flex align-items-center mb-1" style="gap: 20px;">
+                  <label for="maKhachHang">Mã khách hàng:</label>
+                  <input type="text" id="maKhachHang" />
+                </form>
+                <form class="d-flex gap-1 align-items-center mb-1">
+                  <label for="soKenh">Số kênh cao cấp:</label>
+                  <input type="text" id="soKenh" />
+                </form>
+                <form class="d-flex align-items-center mb-1" style="gap:57px";>
+                  <label for="soKetNoi">Số kết nối:</label>
+                  <input type="text" id="soKetNoi"/>
+                </form>
+                <div class="d-flex flex-column justify-content-center">
+                  <button type="button" id="btn-4" class="mx-auto mt-1">
+                    Kết quả
+                  </button>
+                  <div class="alert alert-danger px-1 py-1 text-center my-2" role="alert" id="result4"
+                    style="font-size: 12px;"></div>
+                </div>
               </div>
             </div>
             <div class="top-fold"></div>

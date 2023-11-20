@@ -9,6 +9,9 @@ body {
     justify-content: center;
     height: 100vh;
 }
+.alert{
+    display: none;
+}
 
 .carousel-inner {
     max-width: 625px;
@@ -106,31 +109,6 @@ body {
     background: repeating-linear-gradient(-45deg, #cb5a5e, #cb5a5e 0.5rem, transparent 0.5rem, transparent 1.125rem);
 }
 
-/* .mail .letter .title{
-    height: 0.625rem;
-    width:40%;
-    background: #cb5a5e;
-    margin-top: 0.625rem;
-    margin-left: 0.3125rem;
-}
-
-
-.shadow {
-    position: absolute;
-    width: 12.625rem;
-    height: 0.875rem;
-    background: radial-gradient(#00000080, #00000000, #00000000);
-    top: 11.5rem;
-    left: 50%;
-    transition: 0.4s;
-    transform: translateX(-50%);
-    border-radius: 100%;
-}
-
-/* .item.open .mail{
-    transform: translateY(2.125rem);
-} */
-
 .item.open .mail .top-fold {
     transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
     transform: rotateX(180deg);
@@ -161,17 +139,17 @@ body {
 }
 
 
-#item1 .letter .title h2{
+.letter .title h2{
     font-size: 16px;
     text-align: center;
     margin-bottom: 3px;
 }
 
-#item1 .letter__content label{
+.letter__content label{
     font-size: 16px;
 }
 
-#item1 .letter__content input[type='text']{
+.letter__content input[type='text']{
     padding: 0;
     width: 300px;
     height:20px;
@@ -186,7 +164,7 @@ body {
     font-size: 14px;
 }
 
-#item1 .letter__content button{
+.letter__content button{
     padding: 16px 27px;
     font-size: 14px;
     font-weight: 500;
@@ -200,7 +178,7 @@ body {
     text-transform: uppercase;
     line-height: 1.2px;
 }
-#item1 .letter__content button:hover{
+.letter__content button:hover{
     background-position: right;
 }
 
@@ -215,6 +193,7 @@ body {
 #item1 .letter__content .l-radio4{
     margin-left : 1px
 }
+
 
 
 
