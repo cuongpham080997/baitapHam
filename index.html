@@ -202,11 +202,11 @@
                 </form>
                 <form class="d-flex gap-1 align-items-center mb-2">
                   <label for="tongThuNhap">Tổng thu nhập/năm</label>
-                  <input type="text" id="tongThuNhap" />
+                  <input type="text" id="tongThuNhap" placeholder="Nhập vào số > 4tr"/>
                 </form>
                 <form class="d-flex gap-1 align-items-center mb-2">
                   <label for="nguoiPhuThuoc">Số người phụ thuộc</label>
-                  <input type="text" id="nguoiPhuThuoc" />
+                  <input type="text" id="nguoiPhuThuoc" placeholder="Nhập vào 1 số nguyên dương"/>
                 </form>
                 <div class="d-flex flex-column justify-content-center">
                   <button type="button" id="btn-3" class="mx-auto">
@@ -272,12 +272,12 @@
                 <div class="d-flex gap-3 align-items-center mb-1">
                   <label style="font-size: 16px">Khu vực: </label>
                   <label for="nhaDan" class="l-radio">
-                    <input type="radio" id="nhaDan" name="selector1" tabindex="1" />
+                    <input type="radio" id="nhaDan" name="selector1" tabindex="1" onchange="toggleInput()" />
                     <span>Nhà Dân</span>
                   <br>
                   </label>
                   <label for="business" class="l-radio">
-                    <input type="radio" id="business" name="selector1" tabindex="2" />
+                    <input type="radio" id="business" name="selector1" tabindex="2" onchange="toggleInput()"/>
                     <span>Doanh Nghiệp</span>
                   </label>
                 </div>
@@ -289,7 +289,7 @@
                   <label for="soKenh">Số kênh cao cấp:</label>
                   <input type="text" id="soKenh" />
                 </form>
-                <form class="d-flex align-items-center mb-1" style="gap:57px";>
+                <form class="hidden mb-1" id="connect-num" style="gap:57px";>
                   <label for="soKetNoi">Số kết nối:</label>
                   <input type="text" id="soKetNoi"/>
                 </form>
